@@ -12,6 +12,11 @@ teams use before anything files on hardware.
 This is a simulation so no real drone, ROS/ROS2, or real hardware. The sensor behavior is simplified but, I modeled it based
 on how real sensors behave.
 
+## Results
+
+[Session 1 results (PDF)](<section 1 results.pdf>)
+[Session 2 results (PDF)](<section 2 results.pdf>)
+[Session 3 results (PDF)](<section 3 results test cases.pdf>)
 ## How To Run It
 
 I used PyCharm (using virtual environment and python 3.13) and ran main.py.
