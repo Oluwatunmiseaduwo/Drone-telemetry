@@ -48,7 +48,7 @@ and save the collected data into CSV files. I tried to model a real-world system
 **What I learnt**
 
 I made an intentional GPS malfunction and created a detector for when the drone's GPS readings doesn't match its expected location.
-I learnt how to evaluate how my detection system identifies problems accurately.
+I learnt to evaluate how my detection system identifies problems accurately.
 
 ## Limits
 
