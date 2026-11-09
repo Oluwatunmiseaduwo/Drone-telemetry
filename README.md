@@ -35,7 +35,20 @@ and save the collected data into CSV files. I tried to model a real-world system
 
 ## Second Session - Fault injection + detector: Nov 4, 2026
 
+**What I built**
+- GPS drift fault injection: for between t=20s and t=30s, I set the GPS position to move away from the truth by one extra meter per second (up to 10m), then move back like a real GPS failure mode
+- Every GPS row carries an 'is_fault' ground-truth label, so the detector can be graded honestly
+- 'detector.py': I made this file to compare each GPS reading to the planned route; it never looks at the true position; and flags readings more than 4m off the route. The 4m threshold sits above normal GPS noise and below the drift's 10m peak
+- The detector grades itself against the labels: precision / recall / F1 + detection delay in seconds
+- **Results**: 
+  - The faulty flight has precision: 1.00, recall: 0.70, F1: 0.82 and detection delay: 3.0s because it caught 7 out of 10 fault readings; the 3 missed are the fault's first 3 seconds, while the drift was still under the threshold
+  - The clean flight has no false alarms across all 42 readings
+  - A lower threshold catches the drift sooner but starts flagging normal GPS noise; zero false alarms was worth the 3-second delay
 
+**What I learnt**
+
+I made an intentional GPS malfunction and created a detector for when the drone's GPS readings doesn't match its expected location.
+I learnt how to evaluate how my detection system identifies problems accurately.
 
 ## Limits
 
