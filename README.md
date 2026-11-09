@@ -50,8 +50,18 @@ and save the collected data into CSV files. I tried to model a real-world system
 I made an intentional GPS malfunction and created a detector for when the drone's GPS readings doesn't match its expected location.
 I learnt to evaluate how my detection system identifies problems accurately.
 
+## Third Session - Tests + hardening: Nov 4, 2026
+
+**What I built**
+- A pytest suite in 'test_detector.py'; run it with 'pytest' from the project folder
+- I made 3 unit tests on the planned route math (start, mid-route, end) and 2 integration tests on the real log files; a clean flight must produce zero false alarms and the faulty flight must be caught with a detection delay of 5 seconds or less
+- **Results**: all the 5 tests passed.
+
+**What I learnt**
+
+I was able to get all the test passing; I also realized that pytest only collects functions whose names start with 'test_', the first version of the unit test was invisible to it until I renamed.
+
 ## Limits
 
 - Simulation only: The sensor noise is uniform random, not physical model
 - It is a rule-based detection not a trained machine learning (ML) model
-- 

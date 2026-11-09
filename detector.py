@@ -49,6 +49,7 @@ def grade(filename):
     print(f"Caught (TP): {tp}  False alarms (FP): {fp}  Missed (FN): {fn}  Correctly quiet (TN): {tn}")
     print(f"Precision: {precision:.2f}  Recall: {recall:.2f}  F1: {f1:2f}")
     print(f"Detection delay: {delay} seconds after the fault started")
+    return tp, fp, fn, tn, delay
 
 if __name__ == "__main__":
     grade("telemetry_clean.csv")
