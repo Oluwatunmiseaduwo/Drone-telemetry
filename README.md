@@ -15,7 +15,9 @@ on how real sensors behave.
 ## Results
 
 [Session 1 results (PDF)](<section 1 results.pdf>)
+
 [Session 2 results (PDF)](<section 2 results.pdf>)
+
 [Session 3 results (PDF)](<section 3 results test cases.pdf>)
 ## How To Run It
 
