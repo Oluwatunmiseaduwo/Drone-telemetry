@@ -65,3 +65,4 @@ I was able to get all the test passing; I also realized that pytest only collect
 
 - Simulation only: The sensor noise is uniform random, not physical model
 - It is a rule-based detection not a trained machine learning (ML) model
+- Need pytest to run the test_detector.py
